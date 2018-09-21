@@ -17,3 +17,6 @@ Si, por que el ssh se genera de forma manual y unica en la pc y este recien podr
 Markdown es una forma sencilla de agregar formato a textos web. Con formato nos referimos a itálicas, negritas, listas, y más, en texto plano por ejemplo, el texto que nos encontramos en el visor de HTML de los editores de blogs, o en el Bloc de Notas de Windows, para hacer el concepto más asequible
 6. ¿Cómo inicializo y configuro un proyecto de git?
 Inicializo con git init y configuro con git config para los usuarios y email del sistema control de versiones.
+
+
+https://bitbucket.org/snippets/orbisunt/rez9zL
