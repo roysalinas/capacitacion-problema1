@@ -33,4 +33,4 @@ Para entrar a la consola del contenedor.
  docker ps -a = muestra todos los contenedores.
  docker ps = muestra los contenedores activos.
  
- 
+ docker run -it namecontainer  ls /app
