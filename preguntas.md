@@ -20,3 +20,17 @@ Inicializo con git init y configuro con git config para los usuarios y email del
 
 
 https://bitbucket.org/snippets/orbisunt/rez9zL
+
+Parte 5
+¿Porqué es necesario crear un contenedor con esta bandera -it ? ¿Qué pasa si no le pongo -it?
+El contenedor con la bandera it se permite interctuar para pode ejecutar comandos.
+EL contenedor ejecuta una vez y muere.
+
+¿Para qué sirve ejecutar el comando bash al ejecutar una imagen?
+Para entrar a la consola del contenedor.
+
+ ¿Cuál es la diferencia entre docker ps y docker ps -a?
+ docker ps -a = muestra todos los contenedores.
+ docker ps = muestra los contenedores activos.
+ 
+ 
