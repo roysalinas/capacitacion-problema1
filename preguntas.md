@@ -34,3 +34,29 @@ Para entrar a la consola del contenedor.
  docker ps = muestra los contenedores activos.
  
  docker run -it namecontainer  ls /app
+ 
+ 1. ¿Cuál es la diferencia entre una imagen y un contenedor?
+    Las imágenes se utilizan para crear contenedores, y nunca cambian.
+    Los contenedores son instancias en ejecución de una imagen. Son los que ejecutan cosas, 
+    los que ejecutarán nuestra aplicación. El concepto de contenedor es 
+    como si restauráramos una máquina virtual a partir de un snapshot.
+ 
+ 2. ¿Cómo listo las imágenes que hay en mi computadora?
+ docker images
+ 
+ 3. ¿Cómo salgo de un contenedor de docker?
+ exit
+ 4. ¿Se elimina el contenedor al salir de ella?
+ No
+ 5. ¿Cómo elimino un contenedor?
+ docker rm idcontainer
+ 6. ¿Para qué es necesario el flag `-i`, `-t`, `--rm`?
+-i = interactivo
+t = interactuar con el terminal
+--rm = eliminar
+ 
+ 7. ¿Cómo verifico que el archivo creado se encuentra en la imagen?
+ docker run -it idcontainer ls ruta_archivo
+ 
+ 8. ¿Cómo se comenta una linea de código en Dockerfile?
+ '#'
