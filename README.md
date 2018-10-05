@@ -38,3 +38,25 @@ Para identificar el usuario o cuenta
 9. ¿Que pasa si creo una imagen sin especificar una versión o tag, con qué versión se crea?
 latest
 
+Para cargar la nueva imagen se siguieron los siguientes pasos:
+Construir la imagen desde el dockerfile
+ docker build -t "percytataje10/orbis-training-docker:1.0" .
+ ejecutar la imagen
+ docker run -p 1080:80 percytataje10/orbis-training-docker:1.0
+
+
+
+PASO 6-----------
+
+1 ¿Qué es NGINX?
+Es un servidor web/proxy de codigo abierto.
+
+2. ¿Cómo expongo puertos en docker?
+con el comando EXPOSE en el Dockerfile
+
+3. ¿Cómo especifico los puertos al levantar un contenedor (docker run)?
+docker run -p 1080:80 percytataje10/orbis-training-docker:1.0
+
+4. ¿Cómo hago 'forward' al levantar un contenedor (docker run)?
+docker run -p 127.0.0.1:1080:80 percytataje10/orbis-training-docker:1.0
+

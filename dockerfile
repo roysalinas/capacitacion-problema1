@@ -2,6 +2,9 @@
 # WORKDIR /app
 # copy preguntas.md /app
 
-FROM percytataje10/orbis-training-docker:0.2.0
-RUN ls /app
-RUN rm -rf /app/preguntas.md
+# FROM percytataje10/orbis-training-docker:0.2.0
+# RUN ls /app
+# RUN rm -rf /app/preguntas.md
+
+FROM nginx:alpine
+# WORKDIR /app

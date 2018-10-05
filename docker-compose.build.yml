@@ -1,0 +1,6 @@
+version: '2'
+services:
+  base:
+    image: percytataje10/orbis-training-docker:1.0
+    build:
+      context: ./
