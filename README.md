@@ -149,3 +149,13 @@ No lee el entrypoint
 si, nib bash sirve para entrypoint , relick otro tipo de ejecucion.
 5. ¿Cómo se envía variables de entorno por Docker CLI y docker-compose?
 -e var= "var"
+
+
+Preguntas:
+
+1. ¿Para qué sirve el archivo `Makefile`?
+Configuracion para hacer los comandos bash 
+
+
+2. ¿Qué es un `target` en `Makefile`?
+ elemento del majefule para ejecutar los bash
