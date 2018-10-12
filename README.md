@@ -84,3 +84,68 @@ Por que Si no levanto ese puerto no se escuchara automaticamente los cambios.
 
 10.
 docker run -p 1042:3030 -p 35729:35729 -v $PWD:/app -w /app  percytataje10/orbis-training-docker:2.0 npm run release
+
+Preguntas
+
+1. ¿Es necesario especificar el `workdir` en docker?, ¿Porqué?
+Es necesario para inicializar la carpeta de inicio.
+2. ¿Que hacen los siguientes comandos? 
+ -`docker ps`
+ Solo muestra contenedores en ejecucion.
+ -`docker pull`
+ Extraer una imagen o un repositorio de un registro
+ -`docker push` 
+ Sube la imgen a un repositorio o un registro
+ -`docker rm`
+ Se elimina el contenedor si es forzado -f
+ -`docker rmi`
+ Se eliminar una imagen si es forzado -f
+ -`docker run`
+Se ejecuta un container
+ -`docker tag`
+ Se tague el contenedor para subirlo al repositorio
+ -`docker search`
+ Busca las imagenes subidas en un repositorio de la nube(docker hub)
+ -`docker login`
+ Accedo a docker hub con mis credenciales
+ -`docker exec`
+ Ejecutar un comando  en un contenedor que esta en ejecucioon
+ -`docker build`
+ Construye una imagen desde docker file
+ -`docker inspect`
+ Devuelve informacion de bao nivel de los contenedores
+ -`docker network`
+ Muetsra las conexiones que hay con el contenedor
+
+
+Parte 8
+1. Crear un contenedor que ejecute el comando curl a la url expuesta del proyecto realizado en el paso 8.   
+docker inspect id_container
+ docker run --network capacitacion-problema1_default node:10.10.0-slim curl http://172.24.0.2:3030/
+    
+2. Crear otro servicio llamado test en el archivo docker-compose que realice lo mismo que el paso anterior
+
+ curl http://172.24.0.2:3030/
+
+3. Crear un archivo llamado example.sh dentro de la carpeta resources
+ docker run -it -v $(pwd):/app -w /app percytataje10/orbis-training-docker:2.0 sh resources/example.sh
+
+
+
+4. Pasar una variable llamada NOMBRE, por el comando docker run y modificar el saludo a mostrar
+ docker run -e VAR="TATAJE" -it -v $(pwd):/app -w /app percytataje10/orbis-training-docker:2.0 sh resources/example.sh
+
+
+docker run -e VAR="TATAJE" -it -v $(pwd):/app -w /app percytataje10/orbis-training-docker:2.0 sh resources/emtrypoint.sh
+docker run --entrypoint=./resources/entrypoint.sh -it -v $(pwd):/app -w /app percytataje10/orbis-training-docker:2.0
+
+1. ¿Qué es bash? ¿Qué significa?
+Bash es un programa informático, cuya función consiste en interpretar órdenes, y un lenguaje de consola
+2. ¿Cómo ejecuto un archivo bash?
+sh miscript.sh
+3. ¿Qué pasa si no especifico en un `.sh`, la linea `#!/bin/bash`?
+No lee el entrypoint
+4. ¿Se puede cambiar el modo bash (`/bin/bash`) a otro tipo de ejecución?
+si, nib bash sirve para entrypoint , relick otro tipo de ejecucion.
+5. ¿Cómo se envía variables de entorno por Docker CLI y docker-compose?
+-e var= "var"

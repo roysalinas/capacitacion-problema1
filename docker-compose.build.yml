@@ -4,4 +4,9 @@ services:
     image: percytataje10/orbis-training-docker:2.0
     build:
       context: ./
+  curl:
+    image: nodecurl
+    build:
+      context: ./
+
     
