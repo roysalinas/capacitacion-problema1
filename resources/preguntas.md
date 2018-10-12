@@ -3,7 +3,8 @@ Capacitación: Git, bash y docker
 Integrantes:
 - Victor Percy Tataje Guzman
 - Carlos Montemayor
-- Luis Panchito
+- Moises Tiburcio
+- Luis Tupa (Panchito, karaoke)
 
 1. ¿Qué es y para qué sirve GIT?
  Software de control de versiones , que nos permite mantener el control de los cambios que se realizan durante el desarrollo de todo el proyecto.

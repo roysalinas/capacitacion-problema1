@@ -6,5 +6,10 @@
 # RUN ls /app
 # RUN rm -rf /app/preguntas.md
 
-FROM nginx:alpine
+#FROM nginx:alpine
 # WORKDIR /app
+
+FROM node:10.10.0-slim
+# WORKDIR /usr/src/app
+# COPY package*.json ./
+# RUN npm install
