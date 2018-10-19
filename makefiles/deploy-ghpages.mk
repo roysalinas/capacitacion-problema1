@@ -16,5 +16,13 @@ define git_init
      git init
 endef
 
+define git_config
+    $(eval GIT_USER_NAME := $(shell git log --pretty=format:"%an" | head -n 1))
+    $(eval GIT_USER_EMAIL := $(shell git log --pretty=format:"%ae" | head -n 1))
+    @cd $(GIT_BRANCH_DIR) && \
+     git config user.email "$(GIT_USER_EMAIL)" && \
+     git config user.name "$(GIT_USER_NAME)"
+endef
+
 deploy.ghpages:
 	@echo 'Deploy to gh-pages...'
