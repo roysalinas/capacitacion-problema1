@@ -24,5 +24,12 @@ define git_config
      git config user.name "$(GIT_USER_NAME)"
 endef
 
+define git_add_remote_repository
+    $(eval REPOSITORY := $(shell git remote -v | grep origin | grep '(push)'| awk '{print $$2}'))
+    $(eval GIT_REPOSITORY_REMOTE := $(shell echo $(REPOSITORY) | sed 's%https://%https://$(GIT_PERSONAL_TOKEN)@%g'))
+    @cd $(GIT_BRANCH_DIR) && \
+     git remote add origin $(GIT_REPOSITORY_REMOTE)
+endef
+
 deploy.ghpages:
 	@echo 'Deploy to gh-pages...'
