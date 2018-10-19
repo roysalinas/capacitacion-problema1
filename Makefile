@@ -4,7 +4,7 @@ include ./makefiletask.mk
 
 APPDIR= /app
 WORKDIR = /app
-IMAGE = percytataje10/orbis-training-docker:2.0
+IMAGE = node:10.10.0-slim
 
 
 

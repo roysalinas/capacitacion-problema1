@@ -1,7 +1,7 @@
 version: '3'
 services:
   app:
-    image: percytataje10/orbis-training-docker:2.0
+    image: node:10.10.0-slim
     ports:
       - 1042:3030
       - 35729:35729
